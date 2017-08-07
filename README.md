@@ -1,2 +1,2 @@
 # Notes
-Repository for my notes
+:pencil:Repository for my notes

@@ -1,7 +1,7 @@
-#GitHub笔记
+# GitHub笔记
 
-###一、git网站了解、仓库创建、设置
-###二、git工具
+### 一、git网站了解、仓库创建、设置
+### 二、git工具
 
 	#显示当前Git配置
 	git config --list
@@ -12,7 +12,7 @@
 	#设置提交仓库是的邮箱信息
 	git config --global user.email "xxxx@xxx.com"
 
-###三、git 命令
+### 三、git 命令
 
 - **概念**：
 ```

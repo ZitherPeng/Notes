@@ -7,4 +7,5 @@
   
 ### 语言
 - [MarkDown](./MarkDown/)
+- [Java](./Java/Java快速入门.md)
 

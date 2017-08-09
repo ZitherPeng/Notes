@@ -16,10 +16,10 @@
 
 - **概念**：
 ```
-	Workspace: 工作区   #未被版本控制
-	Index/Stage:　暂存区 
-	Repository：仓库区（或本地仓库）
-	Remote: 远程仓库，例如github 、开源中国
+Workspace: 工作区   #未被版本控制
+Index/Stage:　暂存区 
+Repository：仓库区（或本地仓库）
+Remote: 远程仓库，例如github 、开源中国
 ```
 - **命令**：	
   - 本地仓库命令

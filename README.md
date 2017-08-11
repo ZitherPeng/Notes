@@ -3,9 +3,9 @@
 
 
 ### 工具
-- [GitHub](./github)
+- [GitHub](./GitHub)
   
 ### 语言
 - [MarkDown](./MarkDown/)
-- [Java](./Java/Java快速入门.md)
+- [Java](./Java/Java.md)
 

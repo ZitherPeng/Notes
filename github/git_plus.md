@@ -1,6 +1,6 @@
 # Git 进阶  
 
-## Git 简介
+## Git简介
 开源的分布式的版本管理系统。发明人 Linus Torvalds（Linux 创始人）。  
 - 优势：
   - 便宜快速的本地分支
@@ -28,7 +28,7 @@
 Untracked 和 Modified 是工作区的两个状态。
 ![](./images/four_status.png)
 
-## GUI 工具  
+## GUI工具  
 - Git GUI
 - Source Tree
 - EGit

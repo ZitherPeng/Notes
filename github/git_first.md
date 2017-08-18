@@ -11,7 +11,7 @@
 	#设置提交仓库是的邮箱信息
 	git config --global user.email "xxxx@xxx.com"
 
-## 三、git 命令
+## 三、git命令
 
 ### 概念：
 - Workspace: 工作区   #未被版本控制

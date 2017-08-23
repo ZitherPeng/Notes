@@ -21,7 +21,7 @@ chrome 浏览器自带开发者工具，浏览器右上的小扳手，在下拉�
 - 通过xpath定位对象：findElement(By.xpath())
 
 示例1：
-```
+```Java
 用户名文本框
 <input type="text" placeholder="用户名" name="username" id="J_username" class="input" required="">
 
@@ -36,7 +36,7 @@ chrome 浏览器自带开发者工具，浏览器右上的小扳手，在下拉�
 
 ```
 示例2：
-```
+```Java
 百度新闻链接
 <a href="http://news.baidu.com" name="tj_trnews" class="mnav">新闻</a>
 
@@ -54,7 +54,7 @@ chrome 浏览器自带开发者工具，浏览器右上的小扳手，在下拉�
 ### 通过xpath定位对象
 &emsp;&emsp;xpath 是一种在 XML 文档中定位元素的语言。因为 HTML 可以看作是 XML 的一种形式，selenium 可使用这种强大语言在 web 应用中定位对象。
 &emsp;&emsp;xpath 有6种定位对象的方式：
-```
+```Java
 1、通过绝对路径做定位 XPath 的开头是一个斜线（/）代表这是绝对路径。
 div: /html/body/div[3]/div[1]/div/div[3] 
 a: /html/body/div[3]/div[1]/div/div[3]/a[2] 
@@ -93,7 +93,7 @@ findElement(By.xpath("//a[contians(text(),'新闻')]")) 包含（模糊）匹配
 ```
 
 ### 通过cssSelector定位对象  
-```
+```Java
 1、使用绝对路径来定位元素。
 CSS绝对路径指的是在DOM结构中具体的位置，使用绝对路径来定位用户名输入字段，在使用绝对路径的时候，每个元素之间要有一个空格。
 如：findElement(By.cssSelector("html body div div div div form span input")) 
@@ -150,7 +150,18 @@ findElement(By.cssSelector("div a[class='mnav']:nth-child(3)"))
 - 批量操作对象，比如将页面上的checkbox都勾选上。
 - 先获取一组对象，再在这组对象中过滤需要具体定位的一些对象。
 
-例：使用tag_name 定位一组指定页面上的checkbox 
+例：使用 cssSelector 定位一组对象后获取他们的标签   
+```Java
+WebDriver driver = new ChromeDriver();
+driver.get("https://www.baidu.com");
+List<WebElement> aLists = driver.findElements(By.cssSelector(".mnav"));
+Iterator<WebElement> integer = aLists.iterator();
+for (; integer.hasNext();) {
+	System.out.println(integer.next().getText());
+}
+driver.quit();
+```
+使用 tag_name 定位一组指定页面上的checkbox 
 ```Java
 List<WebElement> inputs = driver.findElements(By.tagName("input"));
 for (WebElement input : inputs) {
@@ -159,5 +170,38 @@ for (WebElement input : inputs) {
 }
 ```
 ## 层级定位
-
-
+&emsp;&emsp;在实际的项目测试中，经常会遇到无法直接定位到需要选取的元素，但是其父元素比较容易定位，通过定位父元素再遍历其子元素选择需要的目标元素，或者需要定位某个元素下所有的子元素。
+&emsp;&emsp;层级定位的思想是先定位父对象，然后再从父对象中精确定位出其我们需要选取的后代元素。  
+```Java
+WebDriver driver = new ChromeDriver();
+driver.get("https://www.baidu.com");
+driver.findElement(By.cssSelector("#u1")).findElement(By.xpath("a[text()='新闻']")).click();
+```
+## Frame 内对象定位
+&emsp;&emsp;在 web 应用中经常会出现 frame 嵌套的应用，假设页面上有 A,B 两个 frame,其中B在A内，那么定位 B 中的内容则需要先到 A，再到 B。 
+&emsp;&emsp;switchTo().frame 方法可以把当前定位的主题切换到 frame 里，在 frame 里实际是嵌套了另外一个页面，而 webdriver 每次只能在一个页面识别，所以需要用 switchTo().frame 方法去获取 frame 中嵌套的页面。  
+```Java
+driver.switchTo().frame("frameA");	 #移动到id为frameA的frame上 
+driver.switchTo().defaultContent();	# 将识别的主体切换出frame 
+```
+示例  
+```Java
+WebDriver driver = new ChromeDriver();
+driver.get("file:///G:/JavaEEworkspace/oray.webui.pgybox/test-output/html/index.html");
+driver.switchTo().frame("suites");
+driver.findElement(By.cssSelector("a[href='output.html']")).click();
+try {
+	Thread.sleep(3000);
+} catch (InterruptedException e) {
+	e.printStackTrace();
+}
+driver.quit();
+```  
+**注意**  
+switch_to_frame 的参数必须是 id 或者是 name，所以一个 frame 只要有 id 和 name 处理起来很容易。如果没有的话，两种解决思路：   
+1. 让开发加上 id 或者 name。  
+1. 使用 xpath 等方式定位然后实现跳转。
+```Java
+WebElement frameA =driver.findElement(By.xpath("//*[@id='frameA']")); 
+driver.switchTo().frame(frameA);
+```

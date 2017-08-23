@@ -75,13 +75,14 @@ public class openBaidu {
 - 层级定位
 - Frame 内对象定位
 ### [对象操作]()
-### [其他操作]()
+- 常用方法
 - 鼠标事件  
 - 键盘事件
 - 等待时间
-- 多窗口
 - alert \ confirm \ prompt
-- select菜单处理
+- select 菜单处理
+### [其他操作]()
+- 多窗口
 - 调用JS
 - 验证码处理
 - AutoIT使用

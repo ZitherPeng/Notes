@@ -1,0 +1,52 @@
+ <html>
+
+<head>
+
+<script type="text/JavaScript">
+function btn_confirm()
+  {
+  var yc=confirm("Yes or Cancel")
+  if (yc==true)
+    {
+    document.write("OK!")
+    }
+  else
+    {
+    document.write("Cancel!")
+    }
+  }
+</script>
+
+<script type="text/javascript">
+function btn_prompt()
+  {
+  var name=prompt("请输入您的名字","Your Name")
+  if (name!=null && name!="")
+    {
+    document.write("你好！" + name + " ,欢迎光临!")
+    }
+  }
+</script>
+
+<script type="text/javascript">
+
+function btn_alert()
+
+  {
+
+    alert("我是一个消息框！")
+
+  }
+
+</script>
+</head>
+
+<body>
+<input type="button" onclick="btn_prompt()" value="提示框prompt" />
+<input type="button" onclick="btn_confirm()" value="对话框confirm" />
+<input type="button" onclick="btn_alert()" value="消息框alert" />
+
+</body>
+
+</html>
+

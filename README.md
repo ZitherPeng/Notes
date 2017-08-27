@@ -4,21 +4,21 @@
 
 ### 工具
 
-*   [GitHub](./github/)
-*   [MarkDown](./MarkDown/markdown-notes.md)
+- [GitHub](./github/)
+- [MarkDown](./MarkDown/markdown-notes.md)
 
 ### 编程语言
 
-*   [Java](./Java/Java.md)
+- [Java](./Java/Java.md)
 
 ### 自然语言
 
-*   [English](./English/colloquial/colloquial.md)
+- [English](./English/colloquial/colloquial.md)
 
 ### 软件测试相关
 
-*   [Selenium](./selenium/)
+- [Selenium](./selenium/)
 
 ### OS
 
-*   [Linux](./linux/)
+- [Linux](./linux/)

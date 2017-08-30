@@ -71,21 +71,20 @@ public class openBaidu {
 ### [浏览器API](./browser_api.md)
 ### [对象定位](./object_location.md)
 - 定位一个对象  
-- 定位一组对象
-- 层级定位
-- Frame 内对象定位
+- 定位一组对象  
+- 层级定位  
+- Frame 内对象定位  
 ### [对象操作](./object_operation.md)
-- 常用方法
+- 常用方法  
 - 鼠标事件  
-- 键盘事件
-- 等待时间
-- alert \ confirm \ prompt
+- 键盘事件  
+- 等待时间  
+- alert \ confirm \ prompt  
 - select 菜单处理
-### [其他操作]()
-- 多窗口
-- 调用JS
-- 验证码处理
-- AutoIT使用
+### [其他操作](./extend.md)
+- 多窗口  
+- 调用JS  
+- 验证码处理  
 
 
 

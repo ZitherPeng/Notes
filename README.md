@@ -5,7 +5,7 @@
 ### 工具
 
 - [GitHub](./github/)
-- [MarkDown](./MarkDown/markdown-notes.md)
+- [MarkDown](./MarkDown/)
 
 ### 编程语言
 

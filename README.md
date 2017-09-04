@@ -5,7 +5,7 @@
 ### 工具
 
 - [GitHub](./github/)
-- [MarkDown](./MarkDown/)
+- [MarkDown](./Markdown/)
 
 ### 编程语言
 

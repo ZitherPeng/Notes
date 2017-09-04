@@ -38,3 +38,31 @@ Untracked 和 Modified 是工作区的两个状态。
 启动图形界面历史记录（快捷键）
 Git Bash 下命令： gitk
 
+## Git 配置
+### .gitignore
+`# 后接注释`
+![](./images/gitignore_use.png)
+.gitignore 模板
+GitHub 在新建仓时有一些模板，按语言分类。
+<https://github.com/github/gitignore>
+查看忽略规则 `git check-ignore -v .project`
+
+### 换行符
+![](./images/linefeed.png)
+
+### 别名  
+如：查看历史记录（图形形式）
+```Bash
+git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+哈希值 提交时间 | 提交信息 [提交人] --图形显示 --短日期
+```
+设置别名
+```
+git config --global alias.ci commit
+将 commit 设置别名为 ci
+```
+```
+cd ~ 到根目录下修改.gitconfig文件设置别名
+cd - 回到仓库
+```
+

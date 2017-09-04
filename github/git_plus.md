@@ -65,4 +65,11 @@ git config --global alias.ci commit
 cd ~ 到根目录下修改.gitconfig文件设置别名
 cd - 回到仓库
 ```
+### 凭证
+
+方法1：
+```
+#存储凭证,使用 wincred 工具管理凭证
+git config --global credential.helper wincred
+```
 

@@ -31,7 +31,7 @@ Untracked 和 Modified 是工作区的两个状态。
 ## GUI工具  
 - Git GUI
 - Source Tree
-- EGit
+- EGit(Eclipse插件)
 
 
 **Git GUI**

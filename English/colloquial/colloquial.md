@@ -1,12 +1,10 @@
 # colloquial 口语
 
 ## 连读  
-- **地道英语讲义**  
-![](./images/read_through.png)
+- ![](./images/read_through.png)
 
 ## 失爆
-- **地道英语讲义**  
-![](./images/out_of_explosion.png)
+- ![](./images/out_of_explosion.png)
 
 ## 弱读（上）
 - 重读表达否定的词 如：won't/can't/don't

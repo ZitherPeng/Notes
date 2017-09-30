@@ -114,3 +114,48 @@ ssh-Keygen -t rsa -C "email@address"
 # 使用 SSH 协议，克隆仓库或添加远程链接 
 
 ```
+
+### 基本操作进阶
+**git**
+
+```
+# git 命令信息
+git 
+
+# 查看全部 git 子命令 
+git help -a 
+
+# 逐行查看文件的修改历史
+git blame <file name>
+
+# 从第100行开始，到110行。逐行查看文件的修改历史
+git blame -L 100,10 <file name>
+
+# 列出打算清除的档案，即未被跟踪的档案
+git clean -n
+
+# 真正删除上面列出的这些档案
+git clean -f
+
+# 连 .gitignore 中忽略的档案也清除
+git clean -x -f
+
+# 查看状态更简略的显示
+git status -sb
+
+```
+
+**git add 深入**
+```
+# 添加新文件、删除文件、修改文件（增删改）、移动文件、修改文件名（git mv a b）
+# 文件夹的操作（添加、删除、移动、改名）
+git add .
+
+# 一个文件多个提交
+git add -p
+
+
+
+```
+
+

@@ -73,3 +73,44 @@ cd - 回到仓库
 git config --global credential.helper wincred
 ```
 
+### Git 协议
+1. 本地协议  
+1. Git 协议 
+```
+特点：没有权限控制，授权机制、访问速度快，一般设置为只读，配合其他协议使用，要求防火墙开9418端口。
+
+# 克隆远程仓库
+git clone git://server_ip/test.git
+
+# 添加远程连接
+git remote add origin git://server_ip/test.git
+``` 
+1. Http 协议  
+```
+# 克隆远程仓库
+git clone https://github.com/***/***.git
+
+# 添加远程仓库的连接
+git remote add origin https://github.com/***/***.git
+
+运行方式： 端口：80、443，基于文本传输、效率低，需要输用户名密码。
+```
+1. SSH 协议
+```
+# 克隆远程仓库
+git clone ssh://git@github.com/***/***.git
+简写 git clone git@github.com:***/***.git
+
+# 添加远程仓库链接
+git remote add origin git@github.com:***/***.git
+```
+```
+秘钥对配置：
+# 生成 RSA 密匙对
+ssh-Keygen -t rsa -C "email@address"
+
+# 在 Github 网站添加公钥
+
+# 使用 SSH 协议，克隆仓库或添加远程链接 
+
+```

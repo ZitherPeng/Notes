@@ -74,8 +74,8 @@ git config --global credential.helper wincred
 ```
 
 ### Git 协议
-1. 本地协议  
-1. Git 协议 
+- 本地协议  
+- Git 协议 
 ```
 特点：没有权限控制，授权机制、访问速度快，一般设置为只读，配合其他协议使用，要求防火墙开9418端口。
 
@@ -85,7 +85,7 @@ git clone git://server_ip/test.git
 # 添加远程连接
 git remote add origin git://server_ip/test.git
 ``` 
-1. Http 协议  
+- Http 协议  
 ```
 # 克隆远程仓库
 git clone https://github.com/***/***.git
@@ -95,7 +95,7 @@ git remote add origin https://github.com/***/***.git
 
 运行方式： 端口：80、443，基于文本传输、效率低，需要输用户名密码。
 ```
-1. SSH 协议
+- SSH 协议
 ```
 # 克隆远程仓库
 git clone ssh://git@github.com/***/***.git

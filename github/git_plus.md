@@ -153,8 +153,20 @@ git add .
 
 # 一个文件多个提交
 git add -p
+```
 
-
+**git commit 深入**
+- commit 提交原则：
+  - 每个提交保证适当的颗粒度、相关性和独立性
+  - 一个小功能、小改进或一个 bug fix 为单位
+  - 对应的 Unit Test 程序在同一个
+  - 无相关的修改不在同一个 commit
+  - 语法错误的半成品程序不能作提交
+- 规范注解
+  - Angular 规范  
+![](./images/message.png)
+```
+git commit 进入文本编写
 
 ```
 

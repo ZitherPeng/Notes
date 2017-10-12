@@ -167,7 +167,11 @@ git add -p
 ![](./images/message.png)
 ```
 git commit 进入文本编写
+<footer> 区可以用来关闭 Issues ： 用法 close #IssuesID
 ```
+
+**信息查看深入**
+
 
 
 

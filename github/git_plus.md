@@ -170,13 +170,9 @@ git commit 进入文本编写
 <footer> 区可以用来关闭 Issues ： 用法 close #IssuesID
 ```
 
-<<<<<<< HEAD
 **信息查看深入**
 
 
 
 
 
-=======
-**信息查看深入**
->>>>>>> 1cef2d1631c07e84ccf21f352bc677c8c2f87235

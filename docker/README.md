@@ -25,7 +25,7 @@
 Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。  
 
 ### 安装
-```bash
+```Bash
 Centos：
 yum install -y epel-release
 yum install docker-io # 安装docker  
@@ -35,7 +35,7 @@ apt-get update
 apt-get install docker # 安装docker
 ```
 [参考 docker 安装手册](http://www.docker.org.cn/book/install/supported-platform-17.html)  
-```bash
+```Bash
 # 基本信息查看
 docker version # 查看docker的版本号，包括客户端、服务端、依赖的Go等
 docker info # 查看系统(docker)层面信息，包括管理的images, containers数等
@@ -90,23 +90,68 @@ Docker daemon 一般在宿主主机后台运行，等待接收来自客户端的
 ![](./images/container.png)  
 容器 = 镜像 + 读写层。并且容器的定义并没有提及是否要运行容器。  
 
-
-
-
 [参考文章《10张图带你深入理解Docker容器和镜像》](http://dockone.io/article/783)
 
-
-
 ## docker 基础命令
+### 启动 docker
+docker服务进程都是以root帐号的身份运行的。把相应的用户添加到这个分组里面。只要是在docker这个组里面的用户就可以直接执行docker命令了。
+```Bash
+# docker服务进程都是以root帐号的身份运行的。把相应的用户添加到这个分组里面。  
+# 只要是在docker这个组里面的用户就可以直接执行docker命令了。
+sudo usermod -aG docker your_username    
+  
+# docker 启动(重启/停止/查看状态)
+systemctl start(restart/stop/status) docker
+```
 ### 镜像
-- 获取和使用、删除、
-- 
-### 容器
-- 创建、启动进入容器
-- 停止和删除容器
-- 
-### docker 加速器
+- 获取镜像、下载、查看
+```Bash
+# 查找某一个我们需要的镜像(比如Ubuntu)  
+docker search Ubuntu  
+
+# 获取docker镜像  
+docker pull name[:tag] # tag标签是版本号,如果不加标签,默认是 latest  
+
+# 查看本地镜像信息  
+docker images  
+```
+由于网络原因，我们在pull Image 的时候，从Docker Hub上下载会很慢，所以可以配置一下docker加速器。  
 1. 注册成为DaoCloud用户。
 1. 登录进入DaoCould用户的控制台页面。
 1. 选择"加速器",选择你Docker启动方式对应的说明进行操作。
 1. [链接地址：https://www.daocloud.io/mirror#accelerator-doc](https://www.daocloud.io/mirror#accelerator-doc)  
+
+- 镜像删除  
+```Bash
+docker rmi <image-id>
+```
+### 容器
+- 创建、启动容器
+```Bash
+# docker create 命令为指定的镜像（image）添加了一个可读写层，构成了一个新的容器。
+docker create <image-id>  
+```
+![](./images/docker_create.png)  
+```Bash
+# docker start命令为容器文件系统创建了一个进程隔离空间。
+docker start <container-id> 
+```
+```Bash
+# 通过镜像直接创建并启动一个容器 
+docker run <image-id>
+```
+
+![](./images/docker_run.png)  
+从图片可以看出，docker run 命令先是利用镜像创建了一个容器，然后运行这个容器。这个命令非常的方便，并且隐藏了两个命令的细节。 
+- 停止和删除容器 
+```Bash
+# 停止容器
+docker stop <container-id>  
+
+# 删除容器(删除运行中的容器带 -f 选项)
+docker rm <container-id>
+```
+
+更多命令参考：  
+[docker简明教程（一）](http://blog.51cto.com/9399369/1758576)  
+[docker简明教程（二）](http://blog.51cto.com/9399369/1758576)

@@ -54,7 +54,7 @@
 [百度]:http://www.baidu.com
 [baidu]:http://www.baidu.com
 [ListPractice]:ListPractice.md
-[liu]:https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1476903450,289056256&amp;fm=26&amp;gp=0.jpg
+[liu]:https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1476903450,289056256&amp;amp;fm=26&amp;amp;gp=0.jpg
 
 ## 六、 图片
 - 语法格式  
@@ -116,5 +116,3 @@ Github Flvored Markdown -- GFM
 - emoji 表情符号
   - 阳光  
     :partly_sunny:
-
-## 十三、总结

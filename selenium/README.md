@@ -48,7 +48,7 @@ Selenium Gird 是一种自动化测试的辅助工具，Gird 通过现有的计�
 
 ### 环境搭建
 
-&emsp;&emsp;详见[博客](http://www.cnblogs.com/dzdwr3/p/7048039.html)。
+&emsp;&emsp;详见[博客](https://www.cnblogs.com/zitherpeng/p/7048039.html)。
 
 ### Demo
 
